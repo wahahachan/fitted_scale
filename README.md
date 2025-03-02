@@ -63,6 +63,7 @@ Row(children: [
 ```
 
 ![simple demo](https://github.com/wahahachan/fitted_scale/blob/master/example/img/scale3.png?raw=true)
+
 Notice that if the above is implemented with `Transform.scale()`, two sides of the Flutter logo(yellow background) will be trimmed.
 
 ## Last but not least...

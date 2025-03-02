@@ -2,6 +2,38 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 class FittedScale extends SingleChildRenderObjectWidget {
+  /// Creates a widget that scales its child along the 2D plane.
+  ///
+  /// The `scaleX` argument provides the scalar by which to multiply the `x`
+  /// axis, and the `scaleY` argument provides the scalar by which to multiply
+  /// the `y` axis. Either may be omitted, in which case the scaling factor for
+  /// that axis defaults to 1.0.
+  ///
+  /// For convenience, to scale the child uniformly, instead of providing
+  /// `scaleX` and `scaleY`, the `scale` parameter may be used.
+  ///
+  /// At least one of `scale`, `scaleX`, and `scaleY` must be non-null. If
+  /// `scale` is provided, the other two must be null; similarly, if it is not
+  /// provided, one of the other two must be provided.
+  ///
+  ///
+  /// {@tool snippet}
+  ///
+  /// This example shrinks an orange box containing text such that each
+  /// dimension is half the size it would otherwise be.
+  ///
+  /// ```dart
+  /// FittedScale(
+  ///   scale: 0.5,
+  ///   child: Container(
+  ///     padding: const EdgeInsets.all(8.0),
+  ///     color: const Color(0xFFE8581C),
+  ///     child: const Text('Bad Idea Bears'),
+  ///   ),
+  /// )
+  /// ```
+  /// {@end-tool}
+  ///
   FittedScale({super.key, this.scale, this.scaleX, this.scaleY, super.child})
       : assert(!(scale == null && scaleX == null && scaleY == null),
             "At least one of 'scale', 'scaleX' and 'scaleY' is required to be non-null"),
