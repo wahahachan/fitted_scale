@@ -1,7 +1,12 @@
 name: fitted_scale
-description: "A scale widget which would layout according to scale."
+description: "A widget that scale its child prior to layout, the final rendering box consumes only as much space as required by the scaled child."
 version: 1.0.0
-homepage:
+homepage: https://github.com/wahahachan/fitted_scale
+repository: https://github.com/wahahachan/fitted_scale
+
+screenshots:
+  - description: "Rendering box shrinks accordingly when scaling down."
+    path: example/img/scale1.png
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
