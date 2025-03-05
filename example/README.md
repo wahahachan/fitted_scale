@@ -6,7 +6,7 @@ Fitted scale is a widget that scales its child prior to layout. Unlike `Transfor
 
 Scale your widget in a similar way as `Transform.scale()`
 
-Applies a uniform scaling:
+Apply a uniform scaling:
 
 ```dart
 FittedScale(
@@ -15,12 +15,12 @@ FittedScale(
 ),
 ```
 
-Specifics horizontal and vertical scaling independently:
+Specify horizontal and/or vertical scaling independently:
 
 ```dart
 FittedScale(
   scaleX: 0.6,
-  scaleY: 1.3
+  scaleY: 1.3,
   child: FlutterLogo( size: 110 )
 ),
 ```
