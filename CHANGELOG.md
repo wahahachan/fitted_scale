@@ -4,4 +4,8 @@
 
 ## 1.0.1
 
-* Enhanced documentation.
+Enhanced documentation.
+
+## 1.0.2
+
+Fixed hit test not giving correct result when scales are negative.

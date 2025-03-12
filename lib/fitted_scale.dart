@@ -131,6 +131,14 @@ class RenderScaledBox extends RenderBox
   }
 
   @override
+  bool hitTest(BoxHitTestResult result, {required Offset position}) {
+    // Scaled objects don't check if they are
+    // themselves hit, because it's not necessary and doestn't
+    // give correct result when scales are negative.
+    return hitTestChildren(result, position: position);
+  }
+
+  @override
   bool hitTestChildren(BoxHitTestResult result, {required Offset position}) {
     if (child == null) {
       return false;
