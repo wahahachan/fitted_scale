@@ -123,8 +123,8 @@ class RenderScaledBox extends RenderBox
   void performLayout() {
     if (child != null) {
       child!.layout(constraints, parentUsesSize: true);
-      size = Size(child!.size.width * transform[0].abs(),
-          child!.size.height * transform[5].abs());
+      size = constraints.constrain(Size(child!.size.width * transform[0].abs(),
+          child!.size.height * transform[5].abs()));
     } else {
       size = constraints.smallest;
     }

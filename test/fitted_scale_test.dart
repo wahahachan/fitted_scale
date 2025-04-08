@@ -302,4 +302,35 @@ void main() {
     await tester.pumpAndSettle();
     expect(res, equals(1));
   });
+
+  testWidgets('Correctly scaled in row', (tester) async {
+    Key testKey = ValueKey(12345);
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Scaffold(
+            body: Center(
+          child: Row(
+            children: [
+              Expanded(child: FlutterLogo(size: 100)),
+              Expanded(
+                  child: FittedScale(
+                scale: 0.8,
+                child: SizedBox(
+                  key: testKey,
+                  height: 60,
+                  width: 90,
+                ),
+              )),
+              IconButton.filled(onPressed: null, icon: Icon(Icons.abc)),
+            ],
+          ),
+        )),
+      ),
+    );
+
+    Finder foundButton = find.byKey(testKey);
+    expect(foundButton, findsOneWidget);
+    Rect r = tester.getRect(foundButton);
+    expect(r.height, equals(48));
+  });
 }
