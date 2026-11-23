@@ -1,4 +1,4 @@
-Fitted scale is a widget that scales its child prior to layout. Unlike `Transform.scale()`, which applies a transform just prior to painting, this widget applies its scaling prior to layout, which means the entire rendered box consumes only as much space as required by the scaled child. You may think of this as the scaling version of `RotatedBox`.
+Fitted scale is a widget that scales its child prior to layout, the size of the final rendering box scales accordingly as the scaled child. Unlike `Transform.scale()`, which applies a transformaion just prior to painting, the redering box remains the same size. You may think of this as the scaling version of the `RotatedBox` widget.
 
 ![simple demo](https://github.com/wahahachan/fitted_scale/blob/master/example/img/scale1.png?raw=true)
 
@@ -27,7 +27,7 @@ FittedScale(
 
 ## More examples
 
-This is an example of scaling up an material `IconButton`. The finally layout is more desirable compared to adopting `Transform.scale()`.
+This is an example of scaling up a material `IconButton`. The finally layout is more desirable compared to adopting `Transform.scale()`.
 
 ```dart
 Row(children: [
@@ -64,7 +64,7 @@ Row(children: [
 
 ![simple demo](https://github.com/wahahachan/fitted_scale/blob/master/example/img/scale3.png?raw=true)
 
-Notice that if the above is implemented with `Transform.scale()`, two sides of the Flutter logo(yellow background) will be trimmed.
+Notice that if the above is implemented with `Transform.scale()`, two sides of the Flutter logo(yellow background) are trimmed.
 
 ## Last but not least...
 

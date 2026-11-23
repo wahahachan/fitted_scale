@@ -6,6 +6,7 @@ import 'package:fitted_scale/fitted_scale.dart';
 void main() {
   test('Simple test', () {
     final aNullChildWidget = FittedScale(scale: 1);
+    expect(aNullChildWidget, isNotNull);
   });
 
   testWidgets('Initialized with a scaled container', (tester) async {

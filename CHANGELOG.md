@@ -13,3 +13,7 @@ Fixed hit test not giving correct result when scales are negative.
 ## 1.0.3
 
 Fixed layout size does not satisfy parent constrain which leads to errors when used inside Expanded/Flexible.
+
+## 1.0.4
+
+Update to accommodate the deprecation of Flutter's core Material components after Flutter 3.47.
